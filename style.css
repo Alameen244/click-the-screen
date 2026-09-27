@@ -25,7 +25,14 @@ img {
 
 h1 {
   position: absolute;
-  animation: pop 0.6s ease-out forwards;
+  animation: pop 0.6s ease-out;
+  transition: transform 0.3s ease;
+  transform: scale(var(--scale)) rotate(var(--rotation));
+  cursor: pointer;
+}
+
+h1:hover {
+  transform: scale(var(--scale)) rotate(var(--rotation)) translate(var(--hx), var(--hy));
 }
 
 @keyframes pop {
